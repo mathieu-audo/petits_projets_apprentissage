@@ -1,1 +1,17 @@
+# Dossiers d'IDE
 .idea/
+.vscode/
+
+# Fichiers Python compilés
+__pycache__/
+*.pyc
+*.pyo
+
+# Environnements virtuels
+.venv/
+venv/
+
+# Autres fichiers inutiles
+*.log
+
+

@@ -1,0 +1,1 @@
+![Interface de la calculatrice](screen_calculatrice.png)

@@ -23,6 +23,11 @@ def calculer(event=None):
  resultat = eval(expression)
  affichage.set(f"{expression} = {resultat}")
 
+def clear():
+ global expression
+ expression = ""
+ affichage.set(expression) 
+
 root.bind("<Return>", calculer)
 
 for i, label in enumerate(["1", "2", "3"]):
@@ -50,7 +55,8 @@ for i, label in enumerate(["*", "+", "-","/"]):
 egal_btn = tk.Button(root, text="=", width=5, height=2, font=("Arial", 16), command=calculer)
 egal_btn.place(x=210, y=190)
 
-
+suppr_btn = tk.Button(root, text="C", width=5, height=2, font=("Arial", 16), command=clear)
+suppr_btn.place(x=50, y=190)
 
 
 

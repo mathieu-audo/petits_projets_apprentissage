@@ -2,7 +2,7 @@ import tkinter as tk
 import httpx
 
 # Clé OpenRouter
-API_KEY = "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"
+API_KEY = "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"
 BASE_URL = "https://openrouter.ai/api/v1"
 
 # Prompt de contexte
@@ -28,7 +28,7 @@ def generate_disquette(user_message):
     try:
         conversation_history.append({"role": "user", "content": user_message})
         data = {
-            "model": "openai/gpt-3.5-turbo",
+            "model": "openai/gpt-4o-mini",
             "messages": conversation_history
         }
         response = httpx.post(f"{BASE_URL}/chat/completions", headers=headers, json=data)

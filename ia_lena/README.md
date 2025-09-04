@@ -1,0 +1,1 @@
+![Aperçu chatbot ia Lena](screen_chatbot.png)

@@ -20,8 +20,8 @@ conversation_history = [
 headers = {
     "Authorization": f"Bearer {API_KEY}",
     "Content-Type": "application/json",
-    "HTTP-Referer": "http://localhost",  # Important pour OpenRouter (ou ton site web si tu en as un)
-    "X-Title": "IA-Disquette"            # Nom du projet (optionnel mais recommandé)
+    "HTTP-Referer": "http://localhost",  
+    "X-Title": "IA-Disquette"            
 }
 
 def generate_disquette(user_message):
@@ -35,7 +35,7 @@ def generate_disquette(user_message):
         response.raise_for_status()
         bot_reply = response.json()["choices"][0]["message"]["content"]
 
-        # Ajoute la réponse de l'IA à l'historique
+        # garder en mémoire l'historique de la conversation
         conversation_history.append({"role": "assistant", "content": bot_reply})
 
         return bot_reply
